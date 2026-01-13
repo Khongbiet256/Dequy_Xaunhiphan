@@ -1,2 +1,29 @@
-# Dequy_Xaunhiphan
-Hiểu bài toán Đệ quy quay lui (Backtracking) để liệt kê xâu nhị phân là rất cần thiết và là nền tảng quan trọng vì nó dạy cách xây dựng từng phần tử (0 hoặc 1) để tạo ra chuỗi hoàn chỉnh, giúp nắm vững cơ chế quay lui (thử-lùi-thử tiếp), một kỹ thuật cốt lõi để giải quyết nhiều bài toán phức tạp khác như Tổ hợp, Hoán vị, N-Queens, Tìm đường,...
+#include<bits/stdc++.h>
+using namespace std;
+
+int n,X[100];
+void inkq(){
+	for(int i=1;i<=n;i++)
+	{
+	cout<<X[i];
+	}
+	cout<<endl;
+}
+void Try(int i)
+{
+	for(int j=1;j<=1;j++)
+	{
+		X[i]=j;
+		if(i==n) inkq();
+		else Try(i+1);
+	}
+	
+} 
+int main(){
+	freeopen("input.txt","r",stdin);
+	freeopen("output.txt","w",stdout);
+	cin>>n;
+	Try(1);
+	return 0;
+
+} 
